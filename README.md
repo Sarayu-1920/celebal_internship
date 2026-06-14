@@ -26,9 +26,14 @@ The role focuses on building data pipelines, working with large-scale datasets, 
 - Transactions and ACID properties
 - Assignment completed
 
-### Week 3 - Subqueries
+### Week 3 - Advanced SQL
 
-- To be updated
+Subqueries
+Common Table Expressions (CTEs)
+Window Functions
+Customer sales analysis
+Ranking and partitioning
+Assignment completed
 
 ### Week 4 - Data Engineering Concepts
 

@@ -28,12 +28,12 @@ The role focuses on building data pipelines, working with large-scale datasets, 
 
 ### Week 3 - Advanced SQL
 
-Subqueries
-Common Table Expressions (CTEs)
-Window Functions
-Customer sales analysis
-Ranking and partitioning
-Assignment completed
+- Subqueries
+- Common Table Expressions (CTEs)
+- Window Functions
+- Customer sales analysis
+- Ranking and partitioning
+- Assignment completed
 
 ### Week 4 - Data Engineering Concepts
 

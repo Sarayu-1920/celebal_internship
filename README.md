@@ -80,8 +80,12 @@ The role focuses on building data pipelines, working with large-scale datasets, 
 
 ## Repository Structure
 
-- "week_1" - Python Basics assignment and datasets
-- "week_2" - SQL Basics assignment and datasets
+- `week_1` – Python Basics assignment, notebooks, and datasets
+- `week_2` – SQL Basics assignment, SQL scripts, and datasets
+- `week_3` – Advanced SQL assignment and datasets
+- `week_4` – Data Engineering concepts assignment
+- `week_5` – Apache Spark assignment and datasets
+- `week_6` – Databricks & Spark SQL assignment and datasets
 
 ### Skills Covered
 

@@ -35,18 +35,41 @@ The role focuses on building data pipelines, working with large-scale datasets, 
 - Ranking and partitioning
 - Assignment completed
 
-### Week 4 - Data Engineering Concepts
+### Week 4 - Data Engineering Fundamentals
 
-- To be updated
+- Data Engineering lifecycle
+- ETL vs ELT
+- Data Warehouse vs Data Lake vs Data Lakehouse
+- OLTP vs OLAP
+- Batch vs Stream processing
+- Data modeling basics
+- Azure Data Engineering ecosystem overview
+- Assignment completed
 
-### Week 5 - Data Cleaning
+### Week 5 - Apache Spark
 
-- To be updated
+- Introduction to Apache Spark
+- Spark Architecture
+- SparkSession and DataFrames
+- Reading and writing data
+- Transformations and Actions
+- Lazy Evaluation
+- Narrow vs Wide Transformations
+- DAG and Query Execution
+- Caching and Persistence
+- Assignment completed
 
-### Week 6 - Spark Introduction
+### Week 6 - Databricks & Spark SQL
 
-- To be updated
-
+- Databricks workspace overview
+- Unity Catalog basics
+- Spark SQL
+- DataFrame operations
+- Filtering, aggregation, joins
+- Column expressions and built-in functions
+- Performance optimization basics
+- Assignment completed
+  
 ### Week 7 - Databricks
 
 - To be updated

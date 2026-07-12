@@ -70,9 +70,19 @@ The role focuses on building data pipelines, working with large-scale datasets, 
 - Performance optimization basics
 - Assignment completed
   
-### Week 7 - Databricks
+### Week 7 - Delta Lake
 
-- To be updated
+- Delta Lake fundamentals
+- Delta table creation from CSV
+- Unity Catalog Volumes
+- Data cleaning (nulls and duplicates)
+- Creating incremental datasets
+- Simulating record updates and inserts
+- Delta Lake MERGE operation
+- Update and Insert using MERGE
+- Row count and duplicate validation
+- Final dataset verification
+- Assignment completed
 
 ### Week 8 - Planning
 
@@ -86,6 +96,7 @@ The role focuses on building data pipelines, working with large-scale datasets, 
 - `week_4` – Data Engineering concepts assignment
 - `week_5` – Apache Spark assignment and datasets
 - `week_6` – Databricks & Spark SQL assignment and datasets
+- `week_7` – Delta Lake MERGE assignment, incremental data processing, and validation
 
 ### Skills Covered
 

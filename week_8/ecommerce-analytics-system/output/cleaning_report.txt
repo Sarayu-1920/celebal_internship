@@ -1,0 +1,40 @@
+Customers Table Cleaning Report
+-------------------------------
+Total Rows Processed: 500
+Missing Values: 0
+Duplicate Rows: 0
+Invalid Customer Types: 0
+Invalid Emails: 10
+Rows Removed: 10
+Rows Remaining: 490
+
+Products Table Cleaning Report
+------------------------------
+Total Rows Processed: 500
+Missing Values: 0
+Duplicate Rows: 0
+Trimmed Product Names: 7
+Invalid Cost Price: 0
+Rows Removed: 0
+Rows Remaining: 500
+
+Orders Table Cleaning Report
+----------------------------
+Total Rows Processed: 500
+Missing Values: 26
+Duplicate Rows: 0
+Invalid Order Status: 0
+NULL Customer IDs: 26
+Rows Removed: 26
+Rows Remaining: 474
+
+Order Items Table Cleaning Report
+---------------------------------
+Total Rows Processed: 500
+Missing Values: 0
+Duplicate Rows: 0
+Order Items with Invalid Order IDs: 19
+Invalid Quantity: 13
+Total Invalid Rows Removed: 32
+Rows Remaining: 468
+

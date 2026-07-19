@@ -126,6 +126,10 @@ def write_report(table_name, report, mode):
 
 customers_df, customers_report = clean_customers(customers_df)
 write_report("Customers Table Cleaning Report", customers_report, "w")    
+customers_df.to_csv(
+    "data/cleaned/customers.csv",
+    index=False
+)
 
 def clean_products(df):
 
@@ -189,6 +193,11 @@ write_report(
     "Products Table Cleaning Report",
     product_report,
     "a"
+)
+
+products_df.to_csv(
+    "data/cleaned/products.csv",
+    index=False
 )
 
 def clean_orders(df):
@@ -259,6 +268,10 @@ write_report(
     "Orders Table Cleaning Report",
     orders_report,
     "a"
+)
+orders_df.to_csv(
+    "data/cleaned/orders.csv",
+    index=False
 )
 
 def check_referential_integrity(order_items_df, orders_df):
@@ -335,6 +348,7 @@ invalid_order_items = check_referential_integrity(
     orders_df
 )
 
+
 print("\nOrder Items Referencing Non-Existent Orders")
 print("-------------------------------------------")
 
@@ -352,3 +366,7 @@ write_report(
     "a"
 )
     
+order_items_df.to_csv(
+    "data/cleaned/order_items.csv",
+    index=False
+)

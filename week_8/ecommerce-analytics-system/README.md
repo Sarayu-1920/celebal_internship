@@ -248,7 +248,7 @@ sql/queries.sql
 ```
 
 Run the queries using SQLite.
-![alt text](<sql sc.png>)
+![alt text](<screenshots/sql sc.png>)
 ---
 
 ## 5. Generate CLI Report
@@ -256,7 +256,7 @@ Run the queries using SQLite.
 ```bash
 python scripts/report_cli.py
 ```
-
+![alt text](<screenshots/cli sc.png>)
 Provide:
 
 - Report type

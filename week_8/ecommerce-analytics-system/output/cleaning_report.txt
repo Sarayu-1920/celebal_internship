@@ -13,27 +13,7 @@ Products Table Cleaning Report
 Total Rows Processed: 500
 Missing Values: 0
 Duplicate Rows: 0
-Trimmed Product Names: 7
-Invalid Cost Price: 0
-Rows Removed: 0
-Rows Remaining: 500
-
-Products Table Cleaning Report
-------------------------------
-Total Rows Processed: 500
-Missing Values: 0
-Duplicate Rows: 0
-Trimmed Product Names: 7
-Invalid Cost Price: 0
-Rows Removed: 0
-Rows Remaining: 500
-
-Products Table Cleaning Report
-------------------------------
-Total Rows Processed: 500
-Missing Values: 0
-Duplicate Rows: 0
-Trimmed Product Names: 7
+Trimmed Product Names: 10
 Invalid Cost Price: 0
 Rows Removed: 0
 Rows Remaining: 500
@@ -41,60 +21,20 @@ Rows Remaining: 500
 Orders Table Cleaning Report
 ----------------------------
 Total Rows Processed: 500
-Missing Values: 26
+Missing Values: 22
 Duplicate Rows: 0
 Invalid Order Status: 0
-NULL Customer IDs: 26
-Rows Removed: 26
-Rows Remaining: 474
-
-Orders Table Cleaning Report
-----------------------------
-Total Rows Processed: 500
-Missing Values: 26
-Duplicate Rows: 0
-Invalid Order Status: 0
-NULL Customer IDs: 26
-Rows Removed: 26
-Rows Remaining: 474
-
-Orders Table Cleaning Report
-----------------------------
-Total Rows Processed: 500
-Missing Values: 26
-Duplicate Rows: 0
-Invalid Order Status: 0
-NULL Customer IDs: 26
-Rows Removed: 26
-Rows Remaining: 474
+NULL Customer IDs: 22
+Rows Removed: 22
+Rows Remaining: 478
 
 Order Items Table Cleaning Report
 ---------------------------------
 Total Rows Processed: 500
 Missing Values: 0
 Duplicate Rows: 0
-Order Items with Invalid Order IDs: 19
-Invalid Quantity: 13
-Total Invalid Rows Removed: 32
-Rows Remaining: 468
-
-Order Items Table Cleaning Report
----------------------------------
-Total Rows Processed: 500
-Missing Values: 0
-Duplicate Rows: 0
-Order Items with Invalid Order IDs: 19
-Invalid Quantity: 13
-Total Invalid Rows Removed: 32
-Rows Remaining: 468
-
-Order Items Table Cleaning Report
----------------------------------
-Total Rows Processed: 500
-Missing Values: 0
-Duplicate Rows: 0
-Order Items with Invalid Order IDs: 19
-Invalid Quantity: 13
-Total Invalid Rows Removed: 32
-Rows Remaining: 468
+Order Items with Invalid Order IDs: 27
+Invalid Quantity: 17
+Total Invalid Rows Removed: 44
+Rows Remaining: 456
 

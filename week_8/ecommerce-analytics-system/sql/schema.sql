@@ -10,9 +10,10 @@ CREATE TABLE customers (
     customer_id INTEGER PRIMARY KEY,
     customer_name TEXT NOT NULL,
     email TEXT NOT NULL,
-    city TEXT,
-    customer_type TEXT,
-    registration_date TEXT
+    registration_date TEXT,
+    customer_type TEXT CHECK (
+        customer_type IN ('REGULAR', 'PREMIUM', 'VIP')
+    )
 );
 
 
@@ -31,11 +32,19 @@ CREATE TABLE orders (
     order_id INTEGER PRIMARY KEY,
     customer_id INTEGER,
     order_date TEXT,
-    status TEXT,
+    status TEXT CHECK (
+        status IN (
+            'PLACED',
+            'SHIPPED',
+            'DELIVERED',
+            'CANCELLED',
+            'RETURNED'
+        )
+    ),
+    region_code TEXT,
     FOREIGN KEY (customer_id)
         REFERENCES customers(customer_id)
 );
-
 
 -- Order Items Table
 CREATE TABLE order_items (

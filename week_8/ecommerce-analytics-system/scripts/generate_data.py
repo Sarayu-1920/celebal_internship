@@ -145,6 +145,8 @@ ORDER_STATUS = [
     "RETURNED"
 ]
 
+REGIONS = ["North", "South", "East", "West"]
+
 def generate_orders():
 
     orders = []
@@ -160,6 +162,9 @@ def generate_orders():
 
         status = random.choice(ORDER_STATUS)
 
+        region_code = random.choice(REGIONS)
+
+
         # 5% NULL customer_id
         if random.random() < 0.05:
             customer_id = None
@@ -174,7 +179,8 @@ def generate_orders():
             "order_id": order_id,
             "customer_id": customer_id,
             "order_date": order_date,
-            "status": status
+            "status": status,
+            "region_code": region_code
         })
 
     return pd.DataFrame(orders)

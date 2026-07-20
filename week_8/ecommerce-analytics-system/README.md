@@ -2,23 +2,24 @@
 
 ## Project Overview
 
-This project simulates an end-to-end e-commerce analytics workflow using **Python, SQLite, and SQL**.
+This project demonstrates an end-to-end E-Commerce Analytics System built using **Python, SQLite, and SQL**. It simulates a real-world data engineering workflow from data generation to reporting.
 
-The project covers:
+The project includes:
 
-- Data generation
+- Synthetic data generation
 - Data cleaning
-- Loading data into SQLite
-- Writing analytical SQL queries
-- Building a command-line reporting tool
-- Handling common data quality edge cases
+- SQLite database creation
+- Analytical SQL queries
+- Python + SQL integration
+- Command Line reporting tool
+- Edge case validation
 
 ---
 
 # Project Structure
 
 ```
-week_8/
+ecommerce-analytics-system/
 │
 ├── data/
 │   ├── raw/
@@ -27,26 +28,40 @@ week_8/
 ├── database/
 │   └── ecommerce.db
 │
-├── docs/
-│
 ├── output/
+│   └── cleaning_report.txt
+│
+├── screenshots/
+│   ├── cli sc.png
+│   └── sql sc.png
 │
 ├── scripts/
+│   ├── generate_data.py
+│   ├── clean_data.py
+│   ├── load_data.py
+│   ├── report_cli.py
+│   └── test_edge_cases.py
 │
-└── sql/
+├── sql/
+│   ├── schema.sql
+│   ├── queries.sql
+│   └── test.sql
+│
+├── README.md
+└── ecommerce.db
 ```
 
 ---
 
-# Folder Explanation
+# Folder Description
 
 ## data/
 
-Contains all CSV datasets used throughout the project.
+Contains all datasets used in the project.
 
 ### raw/
 
-Original generated datasets before cleaning.
+Stores the original generated CSV files.
 
 Files:
 
@@ -55,20 +70,20 @@ Files:
 - order_items.csv
 - products.csv
 
-These datasets intentionally contain data quality issues that are cleaned in the next step.
+These datasets are produced by `generate_data.py`.
 
 ---
 
 ### cleaned/
 
-Cleaned datasets after preprocessing.
+Stores cleaned datasets after preprocessing.
 
-Cleaning performed includes:
+Cleaning includes:
 
 - Missing value handling
 - Duplicate removal
-- Data type corrections
 - Data validation
+- Standardization
 
 These files are loaded into SQLite.
 
@@ -80,34 +95,14 @@ Contains the SQLite database.
 
 ### ecommerce.db
 
-Stores all project tables.
-
-Tables:
+Stores all project tables:
 
 - customers
 - orders
 - order_items
 - products
 
-All SQL queries are executed on this database.
-
----
-
-## docs/
-
-Project documentation.
-
-### architecture.md
-
-Explains the overall project architecture and workflow.
-
-### implementation_notes.md
-
-Documents implementation details, design decisions, and assumptions.
-
-### interview_notes.md
-
-Contains interview-focused explanations and important concepts used in this assignment.
+This database is used for SQL analytics and reporting.
 
 ---
 
@@ -115,69 +110,88 @@ Contains interview-focused explanations and important concepts used in this assi
 
 ### cleaning_report.txt
 
-Summary generated during the data cleaning process.
+Generated during data cleaning.
 
 Includes:
 
-- Number of records processed
+- Records processed
 - Missing values handled
-- Duplicates removed
-- Validation summary
+- Duplicate records removed
+- Cleaning summary
+
+---
+
+## screenshots/
+
+Contains screenshots demonstrating the project.
+
+### cli sc.png
+
+Output of the command-line reporting tool.
+
+### sql sc.png
+
+Execution of SQL analytical queries.
 
 ---
 
 ## scripts/
 
-Contains all Python programs used in the project.
+Python scripts implementing the complete pipeline.
 
 ### generate_data.py
 
 Generates synthetic e-commerce datasets.
 
-Creates:
+Output:
 
-- customers.csv
-- orders.csv
-- order_items.csv
-- products.csv
+- Raw CSV files
 
 ---
 
 ### clean_data.py
 
-Reads raw datasets and performs data cleaning before creating cleaned datasets.
+Reads raw datasets and creates cleaned datasets.
+
+Output:
+
+- Cleaned CSV files
+- Cleaning report
 
 ---
 
 ### load_data.py
 
-Creates the SQLite database and loads cleaned CSV files into database tables.
+Creates SQLite tables and loads cleaned CSV data into the database.
 
 ---
 
 ### report_cli.py
 
-Command-line reporting tool.
+Python + SQLite integration.
 
 Features:
 
 - Accepts report type
 - Accepts date range
 - Connects to SQLite
-- Generates sales summary
-- Displays top 3 products
+- Calculates:
+  - Total Orders
+  - Total Revenue
+  - Unique Customers
+- Displays Top 3 Products
 - Compares current period with previous period
 
 ---
 
 ### test_edge_cases.py
 
-Validates common data quality edge cases.
+Performs basic data quality validation.
 
 Checks:
 
 - Invalid order_id values
-- Discount greater than 100%
+- Discount percentage greater than 100
 - Zero quantity
 - Future order dates
 
@@ -189,33 +203,34 @@ Contains all SQL scripts.
 
 ### schema.sql
 
-Creates all database tables.
+Creates all required database tables.
 
 ---
 
 ### queries.sql
 
-Contains analytical SQL queries including:
+Contains analytical SQL queries covering:
 
-- Revenue analysis
-- Customer analytics
-- Product performance
-- Ranking functions
-- Window functions
-- Running totals
-- Customer segmentation
+- Aggregations
+- Joins
+- CTEs
+- Window Functions
+- Ranking Functions
+- Running Totals
+- Customer Segmentation
+- Business Analytics
 
 ---
 
 ### test.sql
 
-Used to execute and validate SQL queries during development.
+Used during development for testing and validating SQL queries.
 
 ---
 
 # How to Run
 
-## 1. Generate datasets
+## Step 1 – Generate Dataset
 
 ```bash
 python scripts/generate_data.py
@@ -223,7 +238,7 @@ python scripts/generate_data.py
 
 ---
 
-## 2. Clean datasets
+## Step 2 – Clean Dataset
 
 ```bash
 python scripts/clean_data.py
@@ -231,7 +246,7 @@ python scripts/clean_data.py
 
 ---
 
-## 3. Load SQLite database
+## Step 3 – Load SQLite Database
 
 ```bash
 python scripts/load_data.py
@@ -239,46 +254,64 @@ python scripts/load_data.py
 
 ---
 
-## 4. Execute SQL queries
+## Step 4 – Execute SQL Queries
 
-Open:
+Open and execute:
 
 ```
 sql/queries.sql
 ```
 
-Run the queries using SQLite.
-![alt text](<screenshots/sql sc.png>)
+against
+
+```
+database/ecommerce.db
+```
+
 ---
 
-## 5. Generate CLI Report
+## Step 5 – Run CLI Report
 
 ```bash
 python scripts/report_cli.py
 ```
-![alt text](<screenshots/cli sc.png>)
+![alt text](<screenshots/sql sc.png>)
 Provide:
 
-- Report type
-- Start date
-- End date
+- Report Type
+- Start Date
+- End Date
 
-The program displays:
+Example:
+
+```
+Report Type : monthly
+Start Date  : 2024-01-01
+End Date    : 2024-01-31
+```
+
+The report displays:
 
 - Total Orders
-- Total Revenue
+- Revenue
 - Unique Customers
 - Top 3 Products
 - Previous Period Comparison
-![alt text](<cli sc.png>)
 
 ---
 
-## 6. Execute Edge Case Tests
+## Step 6 – Validate Edge Cases
 
 ```bash
 python scripts/test_edge_cases.py
 ```
+![alt text](<screenshots/cli sc.png>)
+This validates:
+
+- Missing parent orders
+- Invalid discounts
+- Zero quantity
+- Future order dates
 
 ---
 
@@ -293,29 +326,31 @@ python scripts/test_edge_cases.py
 
 ---
 
-# Assignment Objectives Covered
+# Assignment Coverage
+
+This project satisfies all Week 8 assignment requirements:
 
 - Synthetic Data Generation
 - Data Cleaning Pipeline
 - SQLite Database Design
 - SQL Analytics
 - Window Functions
-- Aggregations
 - Python + SQL Integration
 - Command Line Reporting
-- Data Validation
-- Edge Case Testing
+- Edge Case Validation
+- Business Reporting
 
 ---
 
 # Learning Outcomes
 
-This project demonstrates practical experience with:
+This project demonstrates practical knowledge of:
 
-- Relational database design
-- SQL querying
-- Data preprocessing
-- Python database connectivity
-- Business reporting
-- Data quality validation
-- Version control using Git
+- Relational Database Design
+- SQL Query Writing
+- Window Functions
+- Data Cleaning
+- SQLite Integration with Python
+- Business Report Generation
+- Data Validation
+- Git Version Control

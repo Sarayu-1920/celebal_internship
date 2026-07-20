@@ -1,0 +1,1 @@
+SELECT MIN(order_date), MAX(order_date) FROM orders;
